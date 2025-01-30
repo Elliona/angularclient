@@ -1,0 +1,41 @@
+.side-menu {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  border: 1px solid #555;
+  /* The background property is added to clearly distinguish the borders between drawer and main
+     content */
+  background: #eee;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  margin: 30px;
+  /*padding: 10px;*/
+  /*border: 1px solid #555;*/
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row {
+  margin: 8px 8px 8px 0;
+}
+

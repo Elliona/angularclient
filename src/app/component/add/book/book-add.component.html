@@ -1,0 +1,178 @@
+<!--<mat-drawer-container class="side-menu">-->
+<!--  <mat-drawer mode="side" opened>-->
+<!--  </mat-drawer>-->
+<!--  <mat-drawer-content>-->
+    <form (ngSubmit)="onSubmit()">
+
+      <!-- bookTitle -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input matInput type="Text" [(ngModel)]="book.bookTitle"
+                 class="form-control"
+                 id="bookTitle"
+                 name="bookTitle"
+                 placeholder="Enter the book Title"
+                 required #name="ngModel">
+        </mat-form-field>
+      </div>
+
+      <!-- bookRelease -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Release Year</mat-label>
+          <input matInput [(ngModel)]="book.bookRelease"
+                 class="form-control"
+                 id="bookRelease"
+                 name="bookRelease"
+                 placeholder="Enter the book Release Year">
+        </mat-form-field>
+      </div>
+
+      <!-- bookEdition -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Edition</mat-label>
+          <input matInput [(ngModel)]="book.bookEdition"
+                 class="form-control"
+                 id="bookEdition"
+                 name="bookEdition"
+                 placeholder="Enter the book Edition">
+        </mat-form-field>
+      </div>
+
+      <!-- bookISBN -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>ISBN</mat-label>
+          <input matInput [(ngModel)]="book.bookIsbn"
+                 class="form-control"
+                 id="bookISBN"
+                 name="bookISBN"
+                 placeholder="Enter the book ISBN">
+        </mat-form-field>
+      </div>
+
+      <!-- bookASIN -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>ASIN</mat-label>
+          <input matInput [(ngModel)]="book.bookAsin"
+                 class="form-control"
+                 id="bookASIN"
+                 name="bookASIN"
+                 placeholder="Enter the book ASIN">
+        </mat-form-field>
+      </div>
+
+      <!-- bookSynopsis -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Synopsis</mat-label>
+          <input matInput [(ngModel)]="book.bookSynopsis"
+                 class="form-control"
+                 id="bookSynopsis"
+                 name="bookSynopsis"
+                 placeholder="Enter the book Synopsis">
+        </mat-form-field>
+      </div>
+
+      <!-- bookPages -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Pages</mat-label>
+          <input matInput [(ngModel)]="book.bookPages"
+                 class="form-control"
+                 id="bookPages"
+                 name="bookPages"
+                 placeholder="Enter the number of book Pages">
+        </mat-form-field>
+      </div>
+
+      <!-- bookEntryInSeries -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Entry in Series</mat-label>
+          <input matInput [(ngModel)]="book.bookEntryInSeries"
+                 class="form-control"
+                 id="bookEntryInSeries"
+                 name="bookEntryInSeries"
+                 placeholder="Enter the books Entry in the Series">
+        </mat-form-field>
+      </div>
+
+      <!-- bookAuthor -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Select Authors</mat-label>
+          <mat-select [(ngModel)]="book.bookAuthors" name="bookAuthors" multiple>
+            <mat-option *ngFor="let author of authors" [value]="author.authorName">
+              {{ author.authorName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <!-- bookPublisher -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Select Publisher</mat-label>
+          <mat-select [(ngModel)]="book.bookPublisherName" name="bookPublisherName">
+            <mat-option *ngFor="let publisher of publisher" [value]="publisher.publisherName">
+              {{ publisher.publisherName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <!-- bookSeries -->
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Select Series</mat-label>
+          <mat-select [(ngModel)]="book.bookSeriesName" name="bookSeriesName">
+            <mat-option *ngFor="let series of series" [value]="series.seriesName">
+              {{ series.seriesName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <section>
+        <div class="submit-button">
+          <button mat-raised-button type="submit">Submit</button>
+        </div>
+      </section>
+
+    </form>
+<!--  </mat-drawer-content>-->
+
+<!--</mat-drawer-container>-->
+
+
+<!--<div class="card my-5">-->
+<!--  <div class="card-body">-->
+<!--    <form (ngSubmit)="onSubmit()" #userForm="ngForm">-->
+<!--      <div class="form-group">-->
+<!--        <label for="title">Book Title</label>-->
+<!--        <input type="text" [(ngModel)]="book.bookTitle"-->
+<!--               class="form-control"-->
+<!--               id="title"-->
+<!--               name="Title"-->
+<!--               placeholder="Enter the book Title"-->
+<!--               required #name="ngModel">-->
+<!--      </div>-->
+<!--      <div [hidden]="!name.pristine" class="alert alert-danger">Title is required</div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="pages">book Pages</label>-->
+<!--        <input type="text" [(ngModel)]="book.bookPages"-->
+<!--               class="form-control"-->
+<!--               id="pages"-->
+<!--               name="Pages"-->
+<!--               placeholder="Enter the number of book Pages"-->
+<!--               required #email="ngModel">-->
+<!--      </div>-->
+<!--      <button type="submit" [disabled]="!userForm.form.valid"-->
+<!--              class="btn btn-info">Submit-->
+<!--      </button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
