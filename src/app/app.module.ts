@@ -20,4 +20,5 @@ import {MatTabsModule} from '@angular/material/tabs';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

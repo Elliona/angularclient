@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SeriesEditComponent } from './series-edit.component';
+import {SeriesEditComponent} from './series-edit.component';
 
 describe('SeriesEditComponent', () => {
   let component: SeriesEditComponent;
@@ -10,7 +10,7 @@ describe('SeriesEditComponent', () => {
     await TestBed.configureTestingModule({
       imports: [SeriesEditComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SeriesEditComponent);
     component = fixture.componentInstance;

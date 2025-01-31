@@ -1,90 +1,80 @@
-<table mat-table [dataSource]="books" class="book-table">
+<div class="margin">
+  <table mat-table [dataSource]="books" class="book-table">
 
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
+    <!-- ID Column -->
+    <ng-container matColumnDef="ID">
+      <th mat-header-cell *matHeaderCellDef> ID</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookId }}</td>
+    </ng-container>
 
-  <!-- ID Column -->
-  <ng-container matColumnDef="ID">
-    <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookId}} </td>
-  </ng-container>
+    <!-- Title Column -->
+    <ng-container matColumnDef="Title">
+      <th mat-header-cell *matHeaderCellDef> Title</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookTitle }}</td>
+    </ng-container>
 
-  <!-- Title Column -->
-  <ng-container matColumnDef="Title">
-    <th mat-header-cell *matHeaderCellDef> Title </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookTitle}} </td>
-  </ng-container>
+    <!-- Publisher Column -->
+    <ng-container matColumnDef="Publisher">
+      <th mat-header-cell *matHeaderCellDef> Publisher</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookPublisherName }}</td>
+    </ng-container>
 
-  <!-- Publisher Column -->
-  <ng-container matColumnDef="Publisher">
-    <th mat-header-cell *matHeaderCellDef> Publisher </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookPublisherName}} </td>
-  </ng-container>
+    <!-- Author Column -->
+    <ng-container matColumnDef="Author">
+      <th mat-header-cell *matHeaderCellDef> Author</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookAuthors }}</td>
+    </ng-container>
 
-  <!-- Author Column -->
-  <ng-container matColumnDef="Author">
-    <th mat-header-cell *matHeaderCellDef> Author </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookAuthors}} </td>
-  </ng-container>
+    <!-- Release Column -->
+    <ng-container matColumnDef="Release">
+      <th mat-header-cell *matHeaderCellDef> Release</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookRelease }}</td>
+    </ng-container>
 
-  <!-- Release Column -->
-  <ng-container matColumnDef="Release">
-    <th mat-header-cell *matHeaderCellDef> Release </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookRelease}} </td>
-  </ng-container>
+    <!-- Edition Column -->
+    <ng-container matColumnDef="Edition">
+      <th mat-header-cell *matHeaderCellDef> Edition</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookEdition }}</td>
+    </ng-container>
 
-  <!-- Edition Column -->
-  <ng-container matColumnDef="Edition">
-    <th mat-header-cell *matHeaderCellDef> Edition </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookEdition}} </td>
-  </ng-container>
+    <!-- ISBN Column -->
+    <ng-container matColumnDef="ISBN">
+      <th mat-header-cell *matHeaderCellDef> ISBN</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookIsbn }}</td>
+    </ng-container>
 
-  <!-- ISBN Column -->
-  <ng-container matColumnDef="ISBN">
-    <th mat-header-cell *matHeaderCellDef> ISBN </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookIsbn}} </td>
-  </ng-container>
+    <!-- ASIN Column -->
+    <ng-container matColumnDef="ASIN">
+      <th mat-header-cell *matHeaderCellDef> ASIN</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookAsin }}</td>
+    </ng-container>
 
-  <!-- ASIN Column -->
-  <ng-container matColumnDef="ASIN">
-    <th mat-header-cell *matHeaderCellDef> ASIN </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookAsin}} </td>
-  </ng-container>
+    <!-- Synopsis Column -->
+    <ng-container matColumnDef="Synopsis">
+      <th mat-header-cell *matHeaderCellDef> Synopsis</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookSynopsis }}</td>
+    </ng-container>
 
-  <!-- Synopsis Column -->
-  <ng-container matColumnDef="Synopsis">
-    <th mat-header-cell *matHeaderCellDef> Synopsis </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookSynopsis}} </td>
-  </ng-container>
+    <!-- Pages Column -->
+    <ng-container matColumnDef="Pages">
+      <th mat-header-cell *matHeaderCellDef> Pages</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookPages }}</td>
+    </ng-container>
 
-  <!-- Pages Column -->
-  <ng-container matColumnDef="Pages">
-    <th mat-header-cell *matHeaderCellDef> Pages </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookPages}} </td>
-  </ng-container>
+    <!-- Series Name Column -->
+    <ng-container matColumnDef="Series">
+      <th mat-header-cell *matHeaderCellDef> Series</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookSeriesName }}</td>
+    </ng-container>
 
-  <!-- Series Name Column -->
-  <ng-container matColumnDef="Series">
-    <th mat-header-cell *matHeaderCellDef> Series </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookSeriesName}} </td>
-  </ng-container>
-
-  <!-- Entry in Series Column -->
-  <ng-container matColumnDef="Entry in Series">
-    <th mat-header-cell *matHeaderCellDef> Entry in Series </th>
-    <td mat-cell *matCellDef="let book"> {{book.bookEntryInSeries}} </td>
-  </ng-container>
+    <!-- Entry in Series Column -->
+    <ng-container matColumnDef="Entry in Series">
+      <th mat-header-cell *matHeaderCellDef> Entry in Series</th>
+      <td mat-cell *matCellDef="let book"> {{ book.bookEntryInSeries }}</td>
+    </ng-container>
 
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
-
-
-
-
-
-
-
-
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

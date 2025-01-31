@@ -11,7 +11,6 @@ import {MatTableModule} from '@angular/material/table';
 })
 export class BookViewComponent implements OnInit {
 
-  //books!: BookDto[];
   books!: Array<BookDto>;
   displayedColumns: string[] = ['ID', 'Title', 'Author', 'Release', 'Edition', 'ISBN', 'ASIN', 'Synopsis', 'Pages', 'Publisher', 'Series', 'Entry in Series'];
   dataSource = this.books;
@@ -24,10 +23,7 @@ export class BookViewComponent implements OnInit {
       .getAllBooks()
       .subscribe(books => {
         this.books = books
-        // console.log(books);
       });
-    // (response => {this.books = response.body || [];});
-    //
   }
 
 }

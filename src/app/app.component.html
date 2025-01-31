@@ -1,4 +1,3 @@
-<!--<h2 class="card-title text-center text-white py-3">{{ title }}</h2>-->
 <mat-toolbar>
   <button mat-icon-button class="menu-icon" aria-label="menu-button" id="toggle" (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
@@ -12,24 +11,23 @@
     <a mat-flat-button routerLink="/home">Home</a>
     <a mat-flat-button routerLink="/view/book">List Books</a>
     <a mat-flat-button routerLink="/add/book">Add New Book</a>
-    <a mat-flat-button routerLink="/view">View</a>
-    <a mat-flat-button routerLink="/add">Add</a>
-    <a mat-flat-button routerLink="/edit">Edit</a>
-    <a mat-flat-button routerLink="/delete">Delete</a>
+    <a mat-flat-button routerLink="/view/book">View</a>
+    <a mat-flat-button routerLink="/add/book">Add</a>
+    <a mat-flat-button routerLink="/edit/book">Edit</a>
+    <a mat-flat-button routerLink="/delete/book">Delete</a>
 
   </mat-drawer>
   <mat-drawer-content class="main-content">
 
-Main Content
-<!--    Add Page Nav Tab's-->
+    <!--    Add Page Nav Tab's-->
     <nav mat-tab-nav-bar *ngIf="isAddPage">
-      <a mat-tab-link [routerLink]="'/add/book'" routerLinkActive="active">Add Book</a>
-      <a mat-tab-link [routerLink]="'/add/author'" routerLinkActive="active">Add Author</a>
-      <a mat-tab-link [routerLink]="'/add/publisher'" routerLinkActive="active">Add Publisher</a>
-      <a mat-tab-link [routerLink]="'/add/series'" routerLinkActive="active">Add Series</a>
+      <a mat-tab-link [routerLink]="'/add/book'" routerLinkActive="active" class="add-bar">Add Book</a>
+      <a mat-tab-link [routerLink]="'/add/author'" routerLinkActive="active" class="add-bar">Add Author</a>
+      <a mat-tab-link [routerLink]="'/add/publisher'" routerLinkActive="active" class="add-bar">Add Publisher</a>
+      <a mat-tab-link [routerLink]="'/add/series'" routerLinkActive="active" class="add-bar">Add Series</a>
     </nav>
 
-<!--    Edit Page Nav Tab's-->
+    <!--    Edit Page Nav Tab's-->
     <nav mat-tab-nav-bar *ngIf="isEditPage">
       <a mat-tab-link [routerLink]="'/edit/book'" routerLinkActive="active">Edit Book</a>
       <a mat-tab-link [routerLink]="'/edit/author'" routerLinkActive="active">Edit Author</a>
@@ -37,7 +35,7 @@ Main Content
       <a mat-tab-link [routerLink]="'/edit/series'" routerLinkActive="active">Edit Series</a>
     </nav>
 
-<!--    View Page Nav Tab's-->
+    <!--    View Page Nav Tab's-->
     <nav mat-tab-nav-bar *ngIf="isViewPage">
       <a mat-tab-link [routerLink]="'/view/book'" routerLinkActive="active">View Book</a>
       <a mat-tab-link [routerLink]="'/view/author'" routerLinkActive="active">View Author</a>
@@ -45,7 +43,7 @@ Main Content
       <a mat-tab-link [routerLink]="'/view/series'" routerLinkActive="active">View Series</a>
     </nav>
 
-<!--    Delete Page Nav Tab's-->
+    <!--    Delete Page Nav Tab's-->
     <nav mat-tab-nav-bar *ngIf="isDeletePage">
       <a mat-tab-link [routerLink]="'/delete/book'" routerLinkActive="active">Delete Book</a>
       <a mat-tab-link [routerLink]="'/delete/author'" routerLinkActive="active">Delete Author</a>

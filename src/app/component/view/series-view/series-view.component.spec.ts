@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SeriesViewComponent } from './series-view.component';
+import {SeriesViewComponent} from './series-view.component';
 
 describe('SeriesViewComponent', () => {
   let component: SeriesViewComponent;
@@ -10,7 +10,7 @@ describe('SeriesViewComponent', () => {
     await TestBed.configureTestingModule({
       imports: [SeriesViewComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SeriesViewComponent);
     component = fixture.componentInstance;

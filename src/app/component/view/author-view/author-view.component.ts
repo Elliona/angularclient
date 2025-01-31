@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthorDto} from '../../../services/models/author-dto';
-import { AuthorControllerService} from '../../../services/services/author-controller.service';
-import { MatTableModule } from '@angular/material/table';
+import {Component, OnInit} from '@angular/core';
+import {AuthorDto} from '../../../services/models/author-dto';
+import {AuthorControllerService} from '../../../services/services/author-controller.service';
+import {MatTableModule} from '@angular/material/table';
 
 @Component({
   selector: 'app-author-view',

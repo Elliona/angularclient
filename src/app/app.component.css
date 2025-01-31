@@ -1,12 +1,9 @@
 
-
-.draw-container{
+.draw-container {
   width: auto;
   height: min(100vh, 100vh);
   margin: 10px;
   border: 1px solid #555;
-  /* The background property is added to clearly distinguish the borders between drawer and main
-     content */
   background: #eee;
 }
 
@@ -19,12 +16,18 @@
   justify-content: start;
 
 }
+
 a {
   flex-direction: column;
   padding: 30px;
   margin: 10px;
   align-items: center;
+  color: purple;
 }
 
-.main-content{
+.main-content {
+}
+
+.active {
+  background-color: rgba(25, 151, 201, 0.3);
 }

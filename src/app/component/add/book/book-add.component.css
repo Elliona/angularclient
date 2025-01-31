@@ -3,8 +3,6 @@
   height: auto;
   margin: 10px;
   border: 1px solid #555;
-  /* The background property is added to clearly distinguish the borders between drawer and main
-     content */
   background: #eee;
 }
 
@@ -17,10 +15,8 @@ form {
   flex-wrap: wrap;
 }
 
-.form-group {
+.margin {
   margin: 30px;
-  /*padding: 10px;*/
-  /*border: 1px solid #555;*/
 }
 
 .example-label {

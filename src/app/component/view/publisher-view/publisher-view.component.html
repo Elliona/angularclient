@@ -1,1 +1,44 @@
-<p>publisher-view works!</p>
+<div class="margin">
+  <table mat-table [dataSource]="publishers" class="publisher-table">
+
+    <!-- publisherId Column -->
+    <ng-container matColumnDef="publisherId">
+      <th mat-header-cell *matHeaderCellDef> ID</th>
+      <td mat-cell *matCellDef="let publisher"> {{ publisher.publisherId }}</td>
+    </ng-container>
+
+    <!-- publisherName Column -->
+    <ng-container matColumnDef="publisherName">
+      <th mat-header-cell *matHeaderCellDef> Name</th>
+      <td mat-cell *matCellDef="let publisher"> {{ publisher.publisherName }}</td>
+    </ng-container>
+
+    <!-- publisherOriginCountry Column -->
+    <ng-container matColumnDef="publisherOriginCountry">
+      <th mat-header-cell *matHeaderCellDef> Origin Country</th>
+      <td mat-cell *matCellDef="let publisher"> {{ publisher.publisherOriginCountry }}</td>
+    </ng-container>
+
+    <!-- publisherOriginCity Column -->
+    <ng-container matColumnDef="publisherOriginCity">
+      <th mat-header-cell *matHeaderCellDef> Origin City</th>
+      <td mat-cell *matCellDef="let publisher"> {{ publisher.publisherOriginCity }}</td>
+    </ng-container>
+
+    <!-- publisherNumberOfBooks Column -->
+    <ng-container matColumnDef="publisherNumberOfBooks">
+      <th mat-header-cell *matHeaderCellDef> Number Of Books</th>
+      <td mat-cell *matCellDef="let publisher"> {{ publisher.publisherNumberOfBooks }}</td>
+    </ng-container>
+
+    <!-- publisherBooks Column -->
+    <ng-container matColumnDef="publisherBooks">
+      <th mat-header-cell *matHeaderCellDef> Books</th>
+      <td mat-cell *matCellDef="let publisher"> {{ publisher.publisherBooks }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>

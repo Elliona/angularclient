@@ -1,1 +1,43 @@
-<p>series-add works!</p>
+<div class="margin">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <!--seriesName-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>series Name</mat-label>
+        <input matInput type="Text" [(ngModel)]="series.seriesName"
+               class="form-control"
+               name="seriesName"
+               placeholder="Enter the series Name"
+               required #name="ngModel">
+      </mat-form-field>
+    </div>
+
+    <!--seriesNumberOfEntries-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>series Number Of Entries</mat-label>
+        <input matInput type="text"
+               [(ngModel)]="series.seriesNumberOfEntries"
+               class="form-control"
+               name="seriesNumberOfEntries"
+               placeholder="Enter the series Number Of Entries"
+               #seriesNumber="ngModel"
+               pattern="^[0-9]+$">
+        <mat-error *ngIf="seriesNumber.invalid && seriesNumber.touched">
+          Please enter a valid number.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <section>
+      <div class="submit-button">
+        <button mat-raised-button type="submit" [disabled]="myForm.invalid" (click)="openSnackBar('Series was saved')">
+          Submit
+        </button>
+      </div>
+    </section>
+
+
+  </form>
+</div>

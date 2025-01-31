@@ -1,1 +1,32 @@
-<p>series-view works!</p>
+<div class="margin">
+  <table mat-table [dataSource]="series" class="series-table">
+
+    <!-- seriesId Column -->
+    <ng-container matColumnDef="seriesId">
+      <th mat-header-cell *matHeaderCellDef> seriesId</th>
+      <td mat-cell *matCellDef="let series"> {{ series.seriesId }}</td>
+    </ng-container>
+
+    <!-- seriesName Column -->
+    <ng-container matColumnDef="seriesName">
+      <th mat-header-cell *matHeaderCellDef> seriesName</th>
+      <td mat-cell *matCellDef="let series"> {{ series.seriesName }}</td>
+    </ng-container>
+
+    <!-- seriesNumberOfEntries Column -->
+    <ng-container matColumnDef="seriesNumberOfEntries">
+      <th mat-header-cell *matHeaderCellDef> seriesNumberOfEntries</th>
+      <td mat-cell *matCellDef="let series"> {{ series.seriesNumberOfEntries }}</td>
+    </ng-container>
+
+    <!-- seriesBooks Column -->
+    <ng-container matColumnDef="seriesBooks">
+      <th mat-header-cell *matHeaderCellDef> seriesBooks</th>
+      <td mat-cell *matCellDef="let series"> {{ series.seriesBooks }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>

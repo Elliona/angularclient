@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BookDeleteComponent } from './book-delete.component';
+import {BookDeleteComponent} from './book-delete.component';
 
 describe('BookDeleteComponent', () => {
   let component: BookDeleteComponent;
@@ -10,7 +10,7 @@ describe('BookDeleteComponent', () => {
     await TestBed.configureTestingModule({
       imports: [BookDeleteComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(BookDeleteComponent);
     component = fixture.componentInstance;

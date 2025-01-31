@@ -1,12 +1,11 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import {MatTabLink} from '@angular/material/tabs';
+import {MatTabLink, MatTabsModule} from '@angular/material/tabs';
 import {NgIf} from '@angular/common';
-import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-root',
@@ -15,12 +14,12 @@ import {MatTabsModule} from '@angular/material/tabs';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  // @ViewChild('sidenav') sidenav?: MatSidenavModule;
   title: string;
   isAddPage: boolean = false;
   isEditPage: boolean = false;
   isViewPage: boolean = false;
   isDeletePage: boolean = false;
+
   constructor(private router: Router) {
     this.title = 'Book Management - Angular Application';
     this.router.events.subscribe((event) => {
@@ -32,8 +31,4 @@ export class AppComponent {
       }
     })
   }
-
-  // toggleClick() {
-  //   this.sidenav?.toggle();
-  // }
 }

@@ -1,1 +1,88 @@
-<p>author-add works!</p>
+<div class="margin">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <!--authorName-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>authorName</mat-label>
+        <input matInput type="Text" [(ngModel)]="author.authorName"
+               class="form-control"
+               name="authorName"
+               placeholder="Enter the authorName"
+               required #name="ngModel">
+      </mat-form-field>
+    </div>
+
+    <!--authorFullName-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>authorFullName</mat-label>
+        <input matInput type="Text" [(ngModel)]="author.authorFullName"
+               class="form-control"
+               name="authorFullName"
+               placeholder="Enter the authorFullName"
+        >
+      </mat-form-field>
+    </div>
+
+
+    <!--authorYearOfBirth-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>authorYearOfBirth</mat-label>
+        <input matInput type="Text" [(ngModel)]="author.authorYearOfBirth"
+               class="form-control"
+               name="authorYearOfBirth"
+               placeholder="Enter the authorYearOfBirth"
+               #authorYearOfBirth="ngModel"
+               pattern="^[0-9]+$">
+        <mat-error *ngIf="authorYearOfBirth.invalid && authorYearOfBirth.touched">
+          Please enter a valid number.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <!--authorYearOfDeath-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>authorYearOfDeath</mat-label>
+        <input matInput type="Text" [(ngModel)]="author.authorYearOfDeath"
+               class="form-control"
+               name="authorYearOfDeath"
+               placeholder="Enter the authorYearOfDeath"
+               #authorYearOfDeath="ngModel"
+               pattern="^[0-9]+$">
+        <mat-error *ngIf="authorYearOfDeath.invalid && authorYearOfDeath.touched">
+          Please enter a valid number.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <!--authorNumberOfBooks-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>authorNumberOfBooks</mat-label>
+        <input matInput type="Text" [(ngModel)]="author.authorNumberOfBooks"
+               class="form-control"
+               name="authorNumberOfBooks"
+               placeholder="Enter the authorNumberOfBooks"
+               #authorNumberOfBooks="ngModel"
+               pattern="^[0-9]+$">
+        <mat-error *ngIf="authorNumberOfBooks.invalid && authorNumberOfBooks.touched">
+          Please enter a valid number.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <section>
+      <div class="submit-button">
+        <button mat-raised-button type="submit" [disabled]="myForm.invalid" (click)="openSnackBar('Author was saved')">
+          Submit
+        </button>
+      </div>
+    </section>
+
+  </form>
+</div>

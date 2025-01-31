@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SeriesDeleteComponent } from './series-delete.component';
+import {SeriesDeleteComponent} from './series-delete.component';
 
 describe('SeriesDeleteComponent', () => {
   let component: SeriesDeleteComponent;
@@ -10,7 +10,7 @@ describe('SeriesDeleteComponent', () => {
     await TestBed.configureTestingModule({
       imports: [SeriesDeleteComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SeriesDeleteComponent);
     component = fixture.componentInstance;

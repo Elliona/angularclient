@@ -1,1 +1,64 @@
-<p>publisher-add works!</p>
+<div class="margin">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <!--publisherName-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>publisher Name</mat-label>
+        <input matInput type="Text" [(ngModel)]="publisher.publisherName"
+               class="form-control"
+               name="publisherName"
+               placeholder="Enter the publisher Name"
+               required #name="ngModel">
+      </mat-form-field>
+    </div>
+
+    <!--publisherOriginCountry-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>publisher Origin Country</mat-label>
+        <input matInput type="Text" [(ngModel)]="publisher.publisherOriginCountry"
+               class="form-control"
+               name="publisherOriginCountry"
+               placeholder="Enter the publisher Origin Country">
+      </mat-form-field>
+    </div>
+
+    <!--publisherOriginCity-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>publisher Origin City</mat-label>
+        <input matInput type="Text" [(ngModel)]="publisher.publisherOriginCity"
+               class="form-control"
+               name="publisherOriginCity"
+               placeholder="Enter the publisher Origin City">
+      </mat-form-field>
+    </div>
+
+    <!--publisherNumberOfBooks-->
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>publisher Number Of Books</mat-label>
+        <input matInput type="Text" [(ngModel)]="publisher.publisherNumberOfBooks"
+               class="form-control"
+               name="publisherNumberOfBooks"
+               placeholder="Enter the publisher Number Of Books"
+               #publisherNumberOfBooks="ngModel"
+               pattern="^[0-9]+$">
+        <mat-error *ngIf="publisherNumberOfBooks.invalid && publisherNumberOfBooks.touched">
+          Please enter a valid number.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <section>
+      <div class="submit-button">
+        <button mat-raised-button type="submit" [disabled]="myForm.invalid"
+                (click)="openSnackBar('Publisher was saved')">Submit
+        </button>
+      </div>
+    </section>
+
+  </form>
+</div>
